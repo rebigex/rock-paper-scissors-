@@ -124,12 +124,16 @@ function report() {
 
     if (userScore < computerScore) {
         console.log(`Total games played: 5. I scored ${computerScore} points. You scored ${userScore} points. You lose!.`)
+        return `Total games played: 5. I scored ${computerScore} points. You scored ${userScore} points. You lose!.`;
     }
     else if (userScore > computerScore) {
         console.log(`Total games played: 5. I scored ${computerScore} points. You scored ${userScore} points. You win!.`)
-    }
+        return `Total games played: 5. I scored ${computerScore} points. You scored ${userScore} points. You win!.`;
+    }  
     else {
         console.log(`Total games played: 5. I scored ${computerScore} points. You scored ${userScore} points. Tie!.`)
+        return `Total games played: 5. I scored ${computerScore} points. You scored ${userScore} points. Tie!.`;
     }
 }
-report()
+let results = report();
+alert(results);
